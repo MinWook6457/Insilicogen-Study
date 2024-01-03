@@ -3,6 +3,7 @@ package Lv2;
 import java.util.Scanner;
 
 // 공백으로 입력
+// https://school.programmers.co.kr/learn/courses/30/lessons/12939
 public class 최댓값과최솟값 {
 	
 	public static void main(String[] args) {
