@@ -1,3 +1,14 @@
+### 2024-01-04/LV2/[가격대 별 상품 개수 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/131530)
+```sql
+SELECT (CASE -- 조건식으로 CASE ~ WHEN 사용
+            WHEN PRICE < 10000 THEN 0 -- 10000원 이하는 0 , 최소 금액 10000원 이상이기 때문
+            ELSE TRUNCATE(PRICE,-4) -- 4자리 버리기
+        END) AS PRICE_GROUP, COUNT(PRODUCT_ID) AS PRODUCT -- 카운팅 하여 PRODUCT로 나타냄
+FROM PRODUCT
+GROUP BY PRICE_GROUP -- 가격대 별로 그룹화
+ORDER BY PRICE_GROUP -- 오름차순
+```
+
 ### 2024-01-03/LV2/[동물 수 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/59406)
 ```sql
 SELECT COUNT(*) FROM ANIMAL_INS;
@@ -19,3 +30,4 @@ in (select FOOD_TYPE , MAX(FAVORITES) -- 서브 쿼리 사용 , MAX를 사용하
     group by FOOD_TYPE ) -- food_type 으로 그룹화
 order by FOOD_TYPE DESC ;
 ```
+
