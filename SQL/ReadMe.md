@@ -1,3 +1,12 @@
+### 2024-01-04/LV2/[자동차 종류 별 특정 옵션이 포함된 자동차 수 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/151137)
+```sql
+SELECT CAR_TYPE , COUNT(OPTIONS) AS CARS
+FROM CAR_RENTAL_COMPANY_CAR 
+WHERE OPTIONS LIKE '%시트%'
+GROUP BY CAR_TYPE
+ORDER BY CAR_TYPE
+```
+
 ### 2024-01-04/LV2/[가격대 별 상품 개수 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/131530)
 ```sql
 SELECT (CASE -- 조건식으로 CASE ~ WHEN 사용
