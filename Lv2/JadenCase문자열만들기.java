@@ -33,5 +33,7 @@ public class JadenCase문자열만들기 {
 		}
 		sb.toString(); // 반드시 필요
 		System.out.println(sb);
+		
+		sc.close();
 	}
 }
