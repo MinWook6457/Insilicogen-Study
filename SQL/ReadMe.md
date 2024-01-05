@@ -1,3 +1,24 @@
+### 2024-01-05/LV2/[조건에 맞는 도서와 저자 리스트 출력하기](https://school.programmers.co.kr/learn/courses/30/lessons/144854)
+```sql
+SELECT  -- 기본적인 JOIN을 사용한 문제
+B.BOOK_ID , 
+A.AUTHOR_NAME, 
+DATE_FORMAT(B.PUBLISHED_DATE, '%Y-%m-%d') AS PUBLISHED_DATE
+FROM BOOK B JOIN AUTHOR A ON B.AUTHOR_ID = A.AUTHOR_ID
+WHERE CATEGORY = '경제'
+ORDER BY PUBLISHED_DATE
+```
+
+### 2024-01-05/LV2/[중성화 여부 파악하기](https://school.programmers.co.kr/learn/courses/30/lessons/59409)
+```sql
+SELECT ANIMAL_ID, NAME, 
+CASE
+ WHEN SEX_UPON_INTAKE LIKE 'Neutered%' OR SEX_UPON_INTAKE LIKE 'Spayed%'
+ THEN 'O' 
+ ELSE 'X' END AS '중성화' 
+FROM ANIMAL_INS ORDER BY ANIMAL_ID; -- 아이디 순으로 조회
+```
+
 ### 2024-01-04/LV2/[자동차 종류 별 특정 옵션이 포함된 자동차 수 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/151137)
 ```sql
 SELECT CAR_TYPE , COUNT(OPTIONS) AS CARS
