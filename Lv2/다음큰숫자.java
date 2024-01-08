@@ -38,6 +38,8 @@ public class 다음큰숫자 {
 		}
 		result = n; // 증가된 값 저장
 		System.out.println(result);
+		
+		sc.close();
 	}
 
 }
