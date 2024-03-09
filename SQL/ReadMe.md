@@ -1,3 +1,13 @@
+### 2024-03-09/LV2/[노선별 평균 역 사이 거리 조회하기](https://school.programmers.co.kr/learn/courses/30/lessons/284531)
+```sql
+SELECT ROUTE, 
+CONCAT(ROUND(SUM(D_BETWEEN_DIST), 1),'km') AS TOTAL_DISTANCE, 
+CONCAT(ROUND(AVG(D_BETWEEN_DIST), 2), 'km') AS AVERAGE_DISTANCE
+FROM SUBWAY_DISTANCE
+GROUP BY ROUTE
+ORDER BY ROUND(SUM(D_BETWEEN_DIST), 1) DESC;
+```
+
 ### 2024-01-05/LV2/[조건에 맞는 도서와 저자 리스트 출력하기](https://school.programmers.co.kr/learn/courses/30/lessons/144854)
 ```sql
 SELECT  -- 기본적인 JOIN을 사용한 문제
