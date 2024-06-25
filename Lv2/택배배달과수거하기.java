@@ -1,3 +1,10 @@
+// 2023 kakao blind recruitment  
+// https://school.programmers.co.kr/learn/courses/30/lessons/150369
+/*
+채점 결과
+정확성: 75.0
+합계: 75.0 / 100.0
+*/
 class Solution {
     public int solution(int cap, int n, int[] deliveries, int[] pickups) {
         int distance = 0; // 최소 이동 거리
