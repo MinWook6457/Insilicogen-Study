@@ -1,3 +1,25 @@
+### 2024-08-02/LV4/[5월 식품들의 총매출 조회하기](https://school.programmers.co.kr/learn/courses/30/lessons/131117)
+```sql
+SELECT 
+    fp.PRODUCT_ID,
+    fp.PRODUCT_NAME,
+    SUM(fp.PRICE * fo.AMOUNT) AS TOTAL_SALES
+FROM 
+    FOOD_PRODUCT fp
+JOIN 
+    FOOD_ORDER fo ON fp.PRODUCT_ID = fo.PRODUCT_ID
+WHERE 
+    EXTRACT(YEAR FROM fo.PRODUCE_DATE) = 2022
+    AND EXTRACT(MONTH FROM fo.PRODUCE_DATE) = 5
+GROUP BY 
+    fp.PRODUCT_ID, 
+    fp.PRODUCT_NAME
+ORDER BY 
+    TOTAL_SALES DESC, 
+    fp.PRODUCT_ID ASC;
+
+```
+
 ### 2024-03-09/LV2/[노선별 평균 역 사이 거리 조회하기](https://school.programmers.co.kr/learn/courses/30/lessons/284531)
 ```sql
 SELECT ROUTE, 
