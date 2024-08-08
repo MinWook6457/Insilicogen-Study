@@ -1,3 +1,21 @@
+### 2024-08-08/LV3/[없어진 기록 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/59042)
+```sql
+SELECT
+    o.ANIMAL_ID,
+    o.NAME
+FROM
+    ANIMAL_OUTS o
+LEFT JOIN
+    ANIMAL_INS i
+ON
+    o.ANIMAL_ID = i.ANIMAL_ID
+WHERE
+    i.ANIMAL_ID IS NULL
+ORDER BY
+    o.ANIMAL_ID;
+
+```
+
 ### 2024-08-03/LV3/[조건별로 분류하여 주문상태 출력하기](https://school.programmers.co.kr/learn/courses/30/lessons/131113)
 ```sql
 SELECT
